@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Minha página de teste</title>
+  </head>
+  <body>
+    <script>
+
+        // 1 – Crie uma função que reverta qualquer string inserida.
+
+        function reverter(palavra) {
+            separar = palavra.split('');
+            inverter = separar.reverse()
+            juntar = inverter.join('');
+            return juntar
+        }
+    
+        //console.log(reverter('teste'));
+
+        /* 2 – Crie uma função que retorne true quando a string 
+        inserida for um palíndromo e false quando não.
+        */
+        
+        function palindromo(palavra) {
+            reverter = reverter(palavra);
+            res = '';
+            if (palavra == reverter) {
+                return true
+            }
+            else {
+                return false
+            }
+        }
+
+        //console.log(palindromo('teste'));
+
+
+        /* 3 – Crie uma função que remova os itens com IDs 
+        duplicados do array de objetos abaixo:
+        */
+
+        /*
+        const arr = [
+            { id: 1, name: '&quot;test1&quot' },
+            { id: 2, name: '&quot;test2&quot' },
+            { id: 2, name: '&quot;test3&quot' },
+            { id: 3, name: '&quot;test4&quot' },
+            { id: 4, name: '&quot;test5&quot' },
+            { id: 5, name: '&quot;test6&quot' },
+            { id: 5, name: '&quot;test7&quot' },
+            { id: 6, name: '&quot;test8&quot' }
+        ];
+
+        for (var i = 0; i < arr.length; i++) {
+          console.log(arr[i]['id']);
+        }
+        // fata terminar
+        */
+
+        
+
+        /* 4 – Crie uma função que retorne um array que consiste
+        no maior número de cada subarray fornecido. Para simplificar, o 
+        array fornecido conterá exatamente 4 subarrays. * Array deverá 
+        ser utilizado:
+        */
+
+        
+        
+        function maiorValor(valores) {
+          for (var i = 0; i < valores.length; i++) {
+          atual = valores[i]
+          max = atual.reduce (function(a,b) {
+            console.log(Math.max(a,b))
+          });
+        }
+        }
+
+        lista = [[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]
+
+        //console.log(maiorValor(lista))
+
+        
+        /* 5 - Crie uma função que receba um array com 2 números e retorne
+        a soma desses dois números mais a soma de todos os números entre eles.
+        O menor número nem sempre virá primeiro.
+        */
+
+        function somarVetor(lista) {
+          soma = lista[0] + lista[1];
+          return soma
+        }
+        
+        a = [1, 3];
+        // falta a soma dos valores entre os números
+        console.log(somarVetor(a))
+
+
+    
+
+
+    </script>
+  </body>
+</html>
